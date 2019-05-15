@@ -1,0 +1,15 @@
+<%= @article.title %>
+<%= @article.content %>
+
+
+<br><br>
+<!-- <form method="GET" action="/articles/<%= @article.id %>/edit" >
+  <input type="submit" value="update">
+</form> -->
+
+<a href="/articles/<%= @article.id %>/edit">Update this article</a>
+
+<form method="POST" action="/articles/<%= @article.id %>" >
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>
